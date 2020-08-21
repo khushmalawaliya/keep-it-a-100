@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: black;
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  position: relative;
+  opacity: 0.85;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.bgimg-1 {
+  background-image: url("101.png");
+  min-height: 100%;
+}
+
+.bgimg-2 {
+  background-image: url("101.jpg");
+  min-height: 400px;
+}
+
+.bgimg-3 {
+  background-image: url("101.png");
+  min-height: 400px;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+  border-radius: 5px;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: rgb(0, 0, 0);
+  
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+  }
+
+}
+
+.block {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: rgba(216, 191, 216, 0);
+  
+  
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: rgb(0, 0, 0);
+  color: rgb(230, 221, 221);
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+.button{
+ align-self: center;
+ color:black;
+}
+
+</style>
+</head>
+<body>
+
+<div class="bgimg-1">
+  <div class="caption">
+  <span class="border">KEEP IT A <b><span style="color:rgb(255, 0, 0);"><i>100</i></span></b>
+  <p style="font-size: 15px; color: rgb(158, 149, 149);">&emsp;<i>-PODCASTS</i></p>
+</span>
+ 
+  </div>
+</div>
+
+<div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+  <h3 style="text-align:center;">KEY IDEA</h3>
+  <p>The key thought behind opening up this podcast was to initiate basic thoughts and challenges faced while starting to follow your hobby as a professsion. We promote people's ideas to the masses so as to make others inspire to follow their passion and have no difficulty in the initial part as the people in that field usually suffer from. We communicate with people in that particular industry may it be music, photography, blogging, open source, computers, fashion etc.
+</p>
+</div>
+
+<div class="bgimg-2">
+  <div class="caption">
+  <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">PODCASTS</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+    <div style="color:#ddd;background-color:#000000;text-align:center;padding:20px 80px;text-align: justify; opacity: 0.95;">
+        <a href='https://www.youtube.com/watch?v=Sj8ljn9NP0I' target="_blank" style="text-decoration: none;"><button class="block" style=" color: rgb(0, 0, 0); border: 0px; "><H3 style="color: white;" >OPEN SOURCE- KUNAL KUSHWAHA</H3></button></a>
+    </div>
+</div>
+
+<div style="color:#ddd;background-color:#041f31;text-align:center;padding:20px 80px;text-align: justify; opacity: 0.95;">
+    <a href='https://www.youtube.com/watch?v=nwYgFRMn0b8' target="_blank" style="text-decoration: none;"><button class="block" style=" color: rgb(0, 0, 0); border: 0px; "><H3 style="color: white;" >FASHION BLOGGING- IVANA DUTTA</H3></button></a>
+</div>
+    <div style="color:#ddd;background-color:#0c4c96;text-align:center;padding:20px 80px;text-align: justify;opacity: 0.75;">
+        <button class="block" onclick="myFunction()" style=" color: rgb(0, 0, 0); border: 0px; "><H3 style="color: white;" >GOLF- ROHIN CHAUHAN</H3></button>
+    </div>
+<div id="snackbar">We are planning on this still. Will be out soon</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("snackbar");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+</script>
+
+<div style="color:#ddd;background-color:#dee2e4;text-align:center;padding:20px 80px;text-align: justify;opacity: 0.75;">
+    <button class="block" onclick="myFunction()" style=" color: rgb(255, 255, 255); border : 0px"><H3 >MUSIC PRODUCTION- KHUSH MALAWALIYA (DISTORTED 808S)</H3></button>
+</div>
+<div id="snackbar">We are planning on this still. Will be out soon</div>
+
+<script>
+function myFunction() {
+var x = document.getElementById("snackbar");
+x.className = "show";
+setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+</script>
+
+    
+<div class="bgimg-3">
+  <div class="caption">
+  <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">FOUNDERS</span>
+  </div>
+</div>
+
+<div style="color:#ddd;background-color:#000000;text-align:center;padding:20px 80px;text-align: justify; opacity: 0.95;">
+  <a href='https://www.linkedin.com/in/owlrana/' target="_blank" style="text-decoration: none;"><button class="block" style=" color: rgb(0, 0, 0); border: 0px; "><H3 style="color: white;" >RAHUL RANA</H3></button></a>
+</div>
+    
+<div style="color:#ddd;background-color:#03272c;text-align:center;padding:20px 80px;text-align: justify; opacity: 0.95;">
+  <a href='https://www.linkedin.com/in/satyam-mishra-83624716b/' target="_blank" style="text-decoration: none;"><button class="block" style=" color: rgb(0, 0, 0); border: 0px; "><H3 style="color: white;" >SATYAM MISHRA</H3></button></a>
+</div>
+<div style="position:relative;">
+  <div style="color:rgb(255, 255, 255);background-color:#e6dcdc;text-align:center;padding:20px 80px;text-align: justify; opacity: 0.95;">
+    <a href='https://www.linkedin.com/in/ishaan-gill-462500176/' target="_blank" style="text-decoration: none;"><button class="block" style=" color: rgb(0, 0, 0); border: 0px; "><H3 style="color: rgb(0, 0, 0);" >ISHAAN GILL</H3></button></a>
+</div>
+</div>
+
+<div class="bgimg-1">
+  <div class="caption">
+  <span class="border" style="color: rgb(190, 178, 178);"><i>WEB PAGE BY - KHUSH MALAWALIYA</i></span>
+  </div>
+</div>
+
+</body>
+</html>
